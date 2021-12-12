@@ -1,0 +1,7 @@
+{
+  "name": "ar-launcher",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
