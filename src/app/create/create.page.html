@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create AR-QR-Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar type="indeterminate" *ngIf="loading"></ion-progress-bar>
+  <ion-card>
+    <ion-card-content style="display: inline-flex !important; width: 100%;">
+      <div style="width: 100%;">
+        <ion-item>
+          <ion-label>3D-Model-URL: </ion-label>
+          <ion-input style="text-align: right;" [(ngModel)]="murl" #ctrl="ngModel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Barcode Value: </ion-label>
+          <ion-input style="text-align: right;" [(ngModel)]="bcv" #ctrl="ngModel"></ion-input>
+        </ion-item>
+        <ion-button (click)="create()" style="margin-top: 3px;">Create</ion-button>
+      </div>
+      <div style="text-align: right; width: 50%;" *ngIf="result">
+        <img [src]="result" style="margin: 5px;"/>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

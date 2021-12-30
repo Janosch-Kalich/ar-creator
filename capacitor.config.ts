@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'ar-launcher',
+  appName: 'ar-creator',
   webDir: 'www',
   bundledWebRuntime: false
 };
