@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back-sharp" style="margin-left: 9px;" size="large" (click)="back()" slot="start"></ion-icon>
+    <ion-title>Upload</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar type="indeterminate" *ngIf="loading"></ion-progress-bar>
+  <ion-card>
+    <ion-card-content style="display: inline-flex !important; width: 100%">
+      <div style="width: 100%;">
+        <ion-item>
+          <label class="customfu" style="cursor: pointer;">3D-Model (.gltf/.glb): 
+          <input accept=".glb,.gltf" type="file" style="text-align: right;" [(ngModel)]="file" #ctrl="ngModel" (change)="change($event.target.files)"/> {{ file ? file.split("\\")[file.split("\\").length - 1] : "Upload file" }} </label>
+        </ion-item>
+      </div>
+      <ion-button (click)="upload()">Upload</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

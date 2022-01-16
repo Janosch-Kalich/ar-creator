@@ -9,7 +9,15 @@ import { Router } from '@angular/router';
 export class HomePage {
   constructor(private router: Router) {}
 
-  create(){
+  create() {
     this.router.navigate(["/create"]);
+  }
+
+  upload() {
+    this.router.navigate(["/upload"]);
+  }
+
+  yourmodels() {
+    this.router.navigate(["your-models"]);
   }
 }

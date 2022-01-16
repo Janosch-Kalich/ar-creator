@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'create',
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
   },
+  {
+    path: 'upload',
+    loadChildren: () => import('./upload/upload.module').then( m => m.UploadPageModule)
+  },
+  {
+    path: 'your-models',
+    loadChildren: () => import('./your-models/your-models.module').then( m => m.YourModelsPageModule)
+  },
 ];
 
 @NgModule({
